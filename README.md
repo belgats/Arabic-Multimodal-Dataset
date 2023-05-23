@@ -107,7 +107,7 @@ In our workflow, we leverage a Python software development kit ([SDK](http://mul
 
 ![Figure Description](CMU-SDK.png)
 
-Check the CMU-Multimodal-SDK directory files for more understanding.
+To gain a better understanding, please review the files in the CMU-Multimodal-SDK directory.
 
 # Evalaution
 
