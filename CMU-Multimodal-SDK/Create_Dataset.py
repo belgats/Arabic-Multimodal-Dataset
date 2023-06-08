@@ -7,6 +7,7 @@ import numpy
 import dataset_folds
 
 import pickle
+import config
 
 #uncomment all the ==> lines together
 
@@ -16,7 +17,7 @@ def myavg(intervals,features):
 
 
 #Downloading the dataset
-ammd_hightlevel=mmdatasdk.mmdataset(dataset_folds.highlevel,'AMMD/')
+ammd_hightlevel=mmdatasdk.mmdataset(dataset_folds.highlevel,'MMAD/')
 #cmumosi_highlevel=mmdatasdk.mmdataset('cmumosi/')
 
 #some random video from cmumosi_highlevel
@@ -41,7 +42,7 @@ ammd_hightlevel.align('bert_vectors',collapse_functions=[myavg])
 
 #Aligning to the computational labels, thus removing the unsupervised components of CMU-MOSI
 
-ammd_hightlevel.add_computational_sequences(dataset_folds.labels,'AMMD/')
+ammd_hightlevel.add_computational_sequences(dataset_folds.labels,'MMAD/')
 ammd_hightlevel.align('Opinion Segment Labels')
 ammd_hightlevel.hard_unify()
 
@@ -85,7 +86,7 @@ dataset['test']['audio'] = tensors[2]["OpenSMILE"] # Set test audio data
 dataset['test']['vision'] = tensors[2]["OpenFace" ] # Set test vision data
 dataset['test']['labels'] = tensors[2]["Opinion Segment Labels"]  # Set test label data
  
-with open('mosi.pkl', 'wb') as f:
+with open('MMAD.pkl', 'wb') as f:
 	pickle.dump(dataset, f)
 
 

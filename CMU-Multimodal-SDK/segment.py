@@ -1,9 +1,11 @@
 import json
 import os
-nb_segment=0
-nb_segmentp=0
-nb_segmentn=0
-total_time=0
+
+nb_segment = 0
+nb_segmentp = 0
+nb_segmentn = 0
+total_time = 0
+
 for file_name in os.listdir('/home/slasher/Downloads/dataset/V2/annotation/'):
     if file_name.endswith('.json'):
         with open('/home/slasher/Downloads/dataset/V2/annotation/'+file_name) as f:
@@ -18,10 +20,7 @@ for file_name in os.listdir('/home/slasher/Downloads/dataset/V2/annotation/'):
                 for segment_id in obj1:
                     if obj1[segment_id]['startTime'] <= 1 :
                         nb_segment = nb_segment+1
-                     
                     nb_segment = nb_segment+1
-                     
-
                     segments[segment_id] = {'startTime': obj1[segment_id]['startTime'],
                                         'endTime': obj1[segment_id]['endTime']}
                     a = obj1[segment_id]['endTime']-  obj1[segment_id]['startTime']
@@ -41,3 +40,4 @@ for file_name in os.listdir('/home/slasher/Downloads/dataset/V2/annotation/'):
                                     'segment_id': obj2[point_id ]['segment_id']}
                         segments[segment_id]['labelText'] = obj2[point_id]['labelText']
 print(total_time)
+print(total_time/500)
