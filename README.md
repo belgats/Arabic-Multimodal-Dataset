@@ -9,18 +9,22 @@ Correspondence to:
 
 ## Paper
 
-[**Towards Arabic Multimodal Dataset for Sentiment Analysis**](https://arxiv.org/abs/xxxx.xxxxxx)<br>
+[**Towards Arabic Multimodal Dataset for Sentiment Analysis**](https://doi.org/10.1109/idsta58916.2023.10317847)<br>
 Haouhat Abdelhamid, Slimane Bellaouar, Attia Nehar, Hadda Cherroun<br>
 
 Please cite our paper if you find our work useful for your research:
 
 ```tex
-@article{xxxx,
-  title={Towards Arabic Multimodal Dataset for Sentiment Analysis},
-  author={Haouhat Abdelhamid, Slimane Bellaouar, Attia Nehar, Hadda Cherroun},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
-  year={2023}
-}
+@INPROCEEDINGS{10317847,
+  author={Haouhat, Abdelhamid and Bellaouar, Slimane and Nehar, Attia and Cherroun, Hadda},
+  booktitle={2023 Fourth International Conference on Intelligent Data Science Technologies and Applications (IDSTA)}, 
+  title={Towards Arabic Multimodal Dataset for Sentiment Analysis}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={126-133},
+  keywords={Sentiment analysis;Pipelines;Buildings;Data science;Transformers;Feature extraction;Behavioral sciences;Sentiment Analysis;Multimodal Learning;Transformers;Arabic Multimodal Dataset},
+  doi={10.1109/IDSTA58916.2023.10317847}}
 ```
 
 # Comprehensive Guide and workflow
@@ -133,6 +137,28 @@ python main.py
 ```
 
 In other hand, we employ separate LSTM models for each modality, specifically designed for unimodal learning. To access the codebase for these LSTM models, please refer to the unimodal_LSTM.ipynb colab file that contains the necessary code and implementation details to train and utilize the LSTM models for each modality independently.
+
+# Future Work: Dataset Extension
+
+We are excited to announce future plans to extend our **[Amd’SaEr: Arabic Multimodal Dataset for Sentiment Analysis and Emotion
+Recognition]** to enhance its utility for multimodal sentiment analysis and emotion recognition. 
+The following updates will be made: 
+
+## Key Planned Extensions:
+
+- **Increased Data Size**: We will significantly expand the dataset to include more diverse samples, ensuring better representation across various scenarios.
+- **New Emotion Annotations**: The extended dataset will introduce emotion labels such as:
+  - **Sad**
+  - **Happy**
+  - **Angry**
+  - **Surprised**
+  - **Worried**
+  - **Neutral**
+- **Scaled Sentiment Intensity**: We are scaling sentiment annotations to provide more granularity, with sentiment values ranging from **-3** (very negative) to **+3** (very positive).
+- **Improved Annotation Strategy**: We will continue refining our inter-annotator agreement strategy to ensure high-quality and reliable annotations.
+- **New Model Benchmarks**: The dataset will be evaluated using state-of-the-art models, providing comprehensive benchmarks for future research in multimodal learning.
+
+For more information and updates, please visit our GitHub repository: [GitHub Repo Link](https://github.com/belgats/AMSAER).
 
 # Acknowledgement
 
